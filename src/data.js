@@ -8,8 +8,21 @@ export const internshipsData = [
     type: "On-site",
     duration: "6 Months",
     stipend: "₹30,000/mo",
+    startDate: "Immediately",
+    applyBy: "15 Apr 26",
     requiredSkills: ["python", "django", "sql", "git"],
-    description: "Join our core engineering team in Bangalore to build scalable backend systems. Perfect for pre-final year students looking for robust software engineering experience."
+    description: "Join our core engineering team in Bangalore to build scalable backend systems. Perfect for pre-final year students looking for robust software engineering experience.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Design and implement REST APIs\n2. Optimize database queries and schemas\n3. Write unit and integration tests\n4. Participate in code reviews\n5. Collaborate with frontend team\n6. Contribute to documentation",
+    skillsRequired: ["Python", "Django", "SQL", "Git", "REST APIs"],
+    whoCan: "1. Students in 2nd-4th year of engineering\n2. Available for full-time internship\n3. Can start between 1 Mar 26 and 15 Apr 26\n4. Available for 6 months continuous\n5. Strong fundamentals in DSA",
+    otherRequirements: "1. Proficiency in Python and Django\n2. Understanding of relational databases\n3. Git and version control experience\n4. Good problem-solving skills\n5. Excellent communication",
+    perks: "Certificate, Letter of recommendation, Flexible timings",
+    openings: 5,
+    applicants: 128,
+    postedAgo: "1 week ago",
+    companyAbout: "TechNova Solutions is a dynamic startup transforming business operations through AI and cloud solutions. We specialize in delivering enterprise-grade SaaS products. Founded in 2020, we have grown to 150+ employees across India.",
+    companyWebsite: "www.technovasolutions.com",
+    hiringInfo: "Hiring since January 2026 | 8 opportunities posted"
   },
   {
     id: "int-102",
@@ -19,8 +32,21 @@ export const internshipsData = [
     type: "Hybrid",
     duration: "3 Months",
     stipend: "₹15,000/mo",
+    startDate: "Immediately",
+    applyBy: "10 Apr 26",
     requiredSkills: ["html", "css", "javascript", "react", "tailwind"],
-    description: "Help us redesign our client-facing portals. You will work closely with UI/UX designers."
+    description: "Help us redesign our client-facing portals. You will work closely with UI/UX designers.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Develop responsive UI components\n2. Implement pixel-perfect designs\n3. Optimize performance and accessibility\n4. Work with Figma designs\n5. Collaborate with product team\n6. Participate in design sprint sessions",
+    skillsRequired: ["HTML", "CSS", "JavaScript", "React", "Tailwind CSS"],
+    whoCan: "1. 2nd or 3rd year engineering students\n2. Available for hybrid internship\n3. Can start within 2 weeks\n4. Portfolio or GitHub profile required",
+    otherRequirements: "1. Strong HTML/CSS fundamentals\n2. React experience\n3. Understanding of responsive design\n4. Familiarity with design tools\n5. Good UI/UX sense",
+    perks: "Free lunch, Learning resources, Mentorship",
+    openings: 3,
+    applicants: 95,
+    postedAgo: "5 days ago",
+    companyAbout: "WebCraft India builds beautiful, functional web applications for startups and enterprises. We focus on clean code and great user experiences.",
+    companyWebsite: "www.webcraftindia.com",
+    hiringInfo: "Hiring since February 2026 | 6 opportunities posted"
   },
   {
     id: "int-103",
@@ -30,8 +56,21 @@ export const internshipsData = [
     type: "On-site",
     duration: "4 Months",
     stipend: "₹18,000/mo",
+    startDate: "Immediately",
+    applyBy: "5 Apr 26",
     requiredSkills: ["autocad", "solidworks", "ansys", "matlab"],
-    description: "Design and simulate chassis components for electric 2-wheelers. Must have hands-on experience in CAD software."
+    description: "Design and simulate chassis components for electric 2-wheelers. Must have hands-on experience in CAD software.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Design mechanical components in CAD\n2. Run simulations and stress analysis\n3. Create technical drawings\n4. Optimize designs for manufacturing\n5. Present designs to engineers\n6. Document design changes",
+    skillsRequired: ["AutoCAD", "SolidWorks", "ANSYS", "MATLAB"],
+    whoCan: "1. Mechanical engineering students (3rd-4th year)\n2. Full-time on-site internship\n3. Can start in March 2026\n4. 4 months availability",
+    otherRequirements: "1. Advanced CAD skills\n2. FEA knowledge (ANSYS)\n3. Understanding of mechanical design\n4. Manufacturing knowledge\n5. Technical drawing proficiency",
+    perks: "Informal dress code, Project-based learning, Certification",
+    openings: 2,
+    applicants: 67,
+    postedAgo: "2 weeks ago",
+    companyAbout: "AutoMech Dynamics is a leading electric vehicle component manufacturer in India. We focus on innovation and sustainability in mobility.",
+    companyWebsite: "www.automechdynamics.com",
+    hiringInfo: "Hiring since January 2026 | 5 opportunities posted"
   },
   {
     id: "int-104",
@@ -41,8 +80,21 @@ export const internshipsData = [
     type: "Remote",
     duration: "6 Months",
     stipend: "₹25,000/mo",
+    startDate: "Immediately",
+    applyBy: "20 Apr 26",
     requiredSkills: ["python", "machine learning", "pandas", "numpy", "tensorflow"],
-    description: "Work on computer vision models for retail analytics. Strong background in Python and ML required."
+    description: "Work on computer vision models for retail analytics. Strong background in Python and ML required.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Develop ML models for retail analytics\n2. Process and clean large datasets\n3. Build data pipelines\n4. Train and evaluate models\n5. Create visualizations\n6. Write research papers on findings",
+    skillsRequired: ["Python", "Machine Learning", "TensorFlow", "Pandas", "NumPy"],
+    whoCan: "1. 3rd-4th year engineering students\n2. Available for full-time remote internship\n3. Can start between 15 Mar-15 Apr 26\n4. 6 months continuous availability",
+    otherRequirements: "1. Strong Python programming\n2. ML fundamentals and algorithms\n3. Statistics knowledge\n4. Experience with ML libraries\n5. Problem-solving skills",
+    perks: "Remote work, Learning materials, Conference passes, Flexible hours",
+    openings: 4,
+    applicants: 156,
+    postedAgo: "3 days ago",
+    companyAbout: "AI Labs Delhi is pioneering AI solutions for retail and e-commerce. We use cutting-edge deep learning and computer vision technologies.",
+    companyWebsite: "www.ailabsdelhi.com",
+    hiringInfo: "Hiring since December 2025 | 12 opportunities posted"
   },
   {
     id: "int-105",
@@ -52,8 +104,21 @@ export const internshipsData = [
     type: "On-site",
     duration: "6 Months",
     stipend: "₹20,000/mo",
+    startDate: "Immediately",
+    applyBy: "1 Apr 26",
     requiredSkills: ["autocad", "project management", "surveying", "revit"],
-    description: "Assist site engineers in managing real estate construction projects in central Mumbai."
+    description: "Assist site engineers in managing real estate construction projects in central Mumbai.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Monitor construction progress\n2. Prepare site reports\n3. Coordinate with contractors\n4. Review safety compliance\n5. Create project documentation\n6. Assist in budget tracking",
+    skillsRequired: ["AutoCAD", "Revit", "Project Management", "Site Surveying"],
+    whoCan: "1. Civil engineering students (3rd-4th year)\n2. Available for full-time on-site internship\n3. Located in or willing to relocate to Mumbai\n4. 6 months availability",
+    otherRequirements: "1. Knowledge of construction practices\n2. CAD and Revit proficiency\n3. Site management skills\n4. Good written communication\n5. Physical fitness for site work",
+    perks: "Site Accommodation, Travel allowance, Certificate",
+    openings: 6,
+    applicants: 89,
+    postedAgo: "1 week ago",
+    companyAbout: "L&T Infrastructure is a leading infrastructure player in India with mega projects across sectors. We focus on quality and timely delivery.",
+    companyWebsite: "www.lntindia.com",
+    hiringInfo: "Hiring since January 2026 | 10 opportunities posted"
   },
   {
     id: "int-106",
@@ -63,8 +128,21 @@ export const internshipsData = [
     type: "Remote",
     duration: "3 Months",
     stipend: "₹20,000/mo",
+    startDate: "Immediately",
+    applyBy: "12 Apr 26",
     requiredSkills: ["javascript", "react", "node.js", "mongodb", "express"],
-    description: "Build MVPs for upcoming startups. Fast-paced learning environment."
+    description: "Build MVPs for upcoming startups. Fast-paced learning environment.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Design system architecture\n2. Develop frontend and backend features\n3. Set up databases and APIs\n4. Deploy applications\n5. Debug and optimize code\n6. Participate in sprint planning",
+    skillsRequired: ["JavaScript", "React", "Node.js", "MongoDB", "Express.js"],
+    whoCan: "1. 2nd-4th year engineering students\n2. Available for full-time remote work\n3. Can start immediately\n4. 3 months continuous availability",
+    otherRequirements: "1. Full stack development experience\n2. Understanding of MERN stack\n3. API design knowledge\n4. Database management skills\n5. Deployment and DevOps basics",
+    perks: "Equity options, Flexible schedule, Networking opportunities",
+    openings: 8,
+    applicants: 203,
+    postedAgo: "4 days ago",
+    companyAbout: "StartupKro is a startup accelerator and incubator supporting early-stage tech companies. We provide mentorship and resources.",
+    companyWebsite: "www.startupkro.com",
+    hiringInfo: "Hiring since November 2025 | 15 opportunities posted"
   },
   {
     id: "int-107",
@@ -74,8 +152,21 @@ export const internshipsData = [
     type: "Hybrid",
     duration: "3 Months",
     stipend: "₹12,000/mo",
+    startDate: "Immediately",
+    applyBy: "8 Apr 26",
     requiredSkills: ["c++", "arduino", "raspberry pi", "iot", "circuit design"],
-    description: "Help build prototypes for smart home appliances. PCB design knowledge is a plus."
+    description: "Help build prototypes for smart home appliances. PCB design knowledge is a plus.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Design circuit schematics\n2. Program microcontrollers\n3. Develop IoT applications\n4. Create prototypes\n5. Test and debug hardware\n6. Document technical specifications",
+    skillsRequired: ["C++", "Arduino", "Raspberry Pi", "IoT", "Circuit Design"],
+    whoCan: "1. Electronics/CSE students (2nd-4th year)\n2. Available for hybrid internship\n3. Can start between March-April 2026\n4. 3 months availability",
+    otherRequirements: "1. Embedded systems knowledge\n2. Microcontroller programming\n3. Circuit design fundamentals\n4. IoT concepts understanding\n5. Problem-solving skills",
+    perks: "Hardware resources, Lab equipment access, Mentorship",
+    openings: 3,
+    applicants: 56,
+    postedAgo: "6 days ago",
+    companyAbout: "SmartHome Innovations develops IoT solutions for smart living. We focus on making homes safer, comfortable, and energy-efficient.",
+    companyWebsite: "www.smarthomeinnovations.com",
+    hiringInfo: "Hiring since February 2026 | 7 opportunities posted"
   },
   {
     id: "int-108",
@@ -85,7 +176,39 @@ export const internshipsData = [
     type: "Remote",
     duration: "6 Months",
     stipend: "₹35,000/mo",
+    startDate: "Immediately",
+    applyBy: "25 Apr 26",
     requiredSkills: ["aws", "docker", "kubernetes", "linux", "python"],
-    description: "Support the devops team in maintaining containerized applications."
+    description: "Support the devops team in maintaining containerized applications.",
+    aboutInternship: "Selected intern's day-to-day responsibilities include:\n1. Deploy and manage cloud infrastructure\n2. Containerize applications\n3. Implement CI/CD pipelines\n4. Monitor system performance\n5. Optimize cloud costs\n6. Implement security best practices",
+    skillsRequired: ["AWS", "Docker", "Kubernetes", "Linux", "Python"],
+    whoCan: "1. 3rd-4th year engineering students\n2. Available for full-time remote internship\n3. Can start immediately\n4. 6 months continuous availability",
+    otherRequirements: "1. Cloud platform knowledge (AWS)\n2. Docker and Kubernetes proficiency\n3. Linux command line expertise\n4. Networking fundamentals\n5. Scripting skills",
+    perks: "AWS certification exam fees, Premium learning resources, Equity options",
+    openings: 2,
+    applicants: 178,
+    postedAgo: "2 days ago",
+    companyAbout: "CloudScale Systems provides enterprise cloud infrastructure and DevOps services. We help companies scale globally with security.",
+    companyWebsite: "www.cloudscalesystems.com",
+    hiringInfo: "Hiring since January 2026 | 9 opportunities posted"
   }
 ];
+
+// Utility function to get consistent company logo color gradient
+export const getCompanyLogoColor = (company) => {
+  const colors = [
+    'from-blue-500 to-blue-600',
+    'from-purple-500 to-indigo-600',
+    'from-green-500 to-emerald-600',
+    'from-orange-500 to-red-600',
+    'from-pink-500 to-rose-600',
+    'from-cyan-500 to-blue-600',
+    'from-yellow-500 to-orange-600',
+    'from-teal-500 to-cyan-600',
+  ];
+  let hash = 0;
+  for (let i = 0; i < company.length; i++) {
+    hash = company.charCodeAt(i) + ((hash << 5) - hash);
+  }
+  return colors[Math.abs(hash) % colors.length];
+};

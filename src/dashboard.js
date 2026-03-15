@@ -1,6 +1,6 @@
 import "./style.css";
 import { getProfileFromFirestore, logout } from "./firebase.js";
-import { internshipsData } from "./data.js";
+import { internshipsData, getCompanyLogoColor } from "./data.js";
 import { rankInternships } from "./matcher.js";
 import { generateFeedback } from "./feedback.js";
 
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     internshipsToRender.forEach((job) => {
       const card = document.createElement("div");
       card.className =
-        "card flex flex-col hover:border-primary-200 hover:shadow-lg transition-all transform hover:-translate-y-1 dark:bg-slate-800 dark:border-slate-700 dark:hover:border-primary-500 duration-300";
+        "card flex flex-col hover:border-primary-200 hover:shadow-lg transition-all transform hover:-translate-y-1 dark:bg-slate-800 dark:border-slate-700 dark:hover:border-primary-500 duration-300 cursor-pointer";
 
       const percentage = Math.round(job.matchScore * 100);
 
@@ -115,14 +115,25 @@ document.addEventListener("DOMContentLoaded", async () => {
       if (percentage > 70) badgeColor = "bg-emerald-100 text-emerald-800";
       else if (percentage > 40) badgeColor = "bg-amber-100 text-amber-800";
 
+      // Get company logo info
+      const logoGradient = getCompanyLogoColor(job.company);
+      const initials = job.company.split(' ').map(w => w[0]).join('');
+
       card.innerHTML = `
         <div class="p-6 flex-1">
           <div class="flex justify-between items-start mb-4">
             <div class="flex-1">
-              <h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">${job.role}</h3>
-              <p class="text-sm font-medium text-slate-500 dark:text-slate-400">${job.company}</p>
+              <div class="flex items-center gap-3 mb-2">
+                <div class="w-10 h-10 bg-gradient-to-br ${logoGradient} rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-md flex-shrink-0">
+                  ${initials}
+                </div>
+                <div>
+                  <h3 class="font-bold text-lg text-slate-900 dark:text-white leading-tight">${job.role}</h3>
+                  <p class="text-xs font-medium text-slate-500 dark:text-slate-400">${job.company}</p>
+                </div>
+              </div>
             </div>
-            <div class="px-2.5 py-1 rounded-lg text-sm font-bold shadow-sm ${badgeColor} flex flex-col items-center">
+            <div class="px-2.5 py-1 rounded-lg text-sm font-bold shadow-sm ${badgeColor} flex flex-col items-center flex-shrink-0">
               ${percentage}%
               <span class="text-[10px] uppercase tracking-wider opacity-80">Match</span>
             </div>
@@ -142,18 +153,34 @@ document.addEventListener("DOMContentLoaded", async () => {
         </div>
         
         <div class="p-4 border-t border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/50 flex gap-3 transition-colors duration-300">
-          <button class="flex-1 btn-primary text-sm py-2" onclick="alert('Application Sent to ${job.company}')">Apply Now</button>
+          <button class="flex-1 btn-primary text-sm py-2 view-details" data-job-id="${job.id}">View Details</button>
           <button class="feedback-trigger px-4 py-2 bg-white dark:bg-slate-700 border border-slate-300 dark:border-slate-600 rounded-lg text-sm font-semibold text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-600 transition-colors shadow-sm focus:ring-2 focus:ring-primary-500" data-job-id="${job.id}">
             Get AI Feedback
           </button>
         </div>
       `;
       grid.appendChild(card);
+
+      // Add click handler to card body for navigation
+      const cardBody = card.querySelector('.p-6');
+      cardBody.addEventListener('click', () => {
+        window.location.href = `/internship-detail.html?id=${job.id}`;
+      });
+    });
+
+    // Re-bind View Details button clicks
+    document.querySelectorAll(".view-details").forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const jobId = e.target.getAttribute('data-job-id');
+        window.location.href = `/internship-detail.html?id=${jobId}`;
+      });
     });
 
     // Re-bind AI Feedback button clicks after re-rendering
     document.querySelectorAll(".feedback-trigger").forEach((btn) => {
       btn.addEventListener("click", (e) => {
+        e.stopPropagation();
         const jobId = e.target.getAttribute("data-job-id");
         const job = internshipsToRender.find((j) => j.id === jobId);
 
