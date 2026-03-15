@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InternMatch Dashboard</title>
+</head>
+
+<body class="bg-slate-50 text-slate-900 font-sans min-h-screen selection:bg-primary-500 selection:text-white dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300">
+
+  <!-- Navbar -->
+  <nav class="bg-white border-b border-slate-200 sticky top-0 z-40 dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center gap-2">
+          <div
+            class="w-8 h-8 bg-gradient-to-br from-primary-600 to-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-md">
+            I</div>
+          <span
+            class="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-700 dark:from-slate-100 dark:to-slate-300 transition-colors">InternMatch</span>
+        </div>
+        <div class="flex items-center gap-4">
+        <div class="flex items-center gap-4">
+          <div class="flex items-center gap-3">
+            <span class="text-[10px] font-bold tracking-widest text-slate-800 dark:text-slate-500 uppercase">Light</span>
+            <button id="theme-toggle" class="relative inline-flex h-6 w-11 items-center rounded-full bg-slate-200 dark:bg-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900">
+              <span class="sr-only">Toggle Dark Mode</span>
+              <span id="theme-toggle-thumb" class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1 dark:translate-x-6 shadow-sm"></span>
+            </button>
+            <span class="text-[10px] font-bold tracking-widest text-slate-400 dark:text-slate-200 uppercase">Dark</span>
+          </div>
+          
+          <a href="/user.html" class="flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 p-1.5 pr-3 rounded-full border border-transparent hover:border-slate-200 dark:hover:border-slate-600 transition-all group">
+            <img id="user-avatar" src="" alt="Avatar" class="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-600 bg-slate-100 dark:bg-slate-700">
+            <span id="user-display" class="text-sm font-semibold text-slate-700 dark:text-slate-200 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors hidden sm:block"></span>
+          </a>
+
+          <span class="w-px h-6 bg-slate-200 dark:bg-slate-700 hidden sm:block"></span>
+          <button id="btn-logout" class="text-sm font-semibold text-slate-500 hover:text-red-500 dark:text-slate-400 dark:hover:text-red-400 transition-colors">Logout</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+    <!-- Top Section -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3 transition-colors">
+          Your Match Dashboard
+          <span
+            class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Live NLP Feed
+          </span>
+        </h1>
+        <p class="text-slate-500 mt-2 max-w-2xl">
+          Our AI engine has analyzed your profile using mathematical textual similarity algorithms to dynamically rank
+          these top internships from across India.
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-slate-200 shadow-sm dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+        <div class="p-2 bg-primary-100 text-primary-600 rounded-lg dark:bg-primary-900/30 dark:text-primary-400">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+          </svg>
+        </div>
+        <div>
+          <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Global Top Match</p>
+          <p id="top-match-score" class="text-xl font-bold text-slate-900 dark:text-white">-%</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Filters & Sort -->
+    <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm mb-6 flex flex-wrap gap-4 items-center dark:bg-slate-800 dark:border-slate-700 transition-colors duration-300">
+      <span class="text-sm font-semibold text-slate-700 dark:text-slate-300">Sort by:</span>
+      <button id="sort-relevance"
+        class="px-3 py-1.5 bg-primary-50 text-primary-700 rounded-lg text-sm font-semibold border border-primary-200 dark:bg-primary-900/40 dark:text-primary-400 dark:border-primary-800 transition-colors">Relevance
+        Score (AI)</button>
+      <button id="sort-alpha"
+        class="px-3 py-1.5 hover:bg-slate-50 text-slate-600 rounded-lg text-sm font-medium border border-transparent dark:text-slate-400 dark:hover:bg-slate-700 transition-colors">Alphabetical</button>
+    </div>
+
+    <!-- Internship Listing Grid -->
+    <div id="internship-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <!-- Rendered via JS -->
+    </div>
+  </main>
+
+  <!-- AI Feedback Modal -->
+  <div id="feedback-modal"
+    class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+    <div
+      class="bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden transform scale-95 transition-transform duration-300">
+      <div
+        class="p-6 border-b border-slate-100 bg-gradient-to-r from-slate-50 to-white flex justify-between items-center">
+        <h3 class="text-lg font-bold text-slate-900 flex items-center gap-2">
+          <svg class="w-5 h-5 text-primary-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z">
+            </path>
+          </svg>
+          AI Feedback Analysis
+        </h3>
+        <button id="close-modal-btn"
+          class="text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-full p-1.5 transition-colors">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-6">
+        <div id="modal-content"
+          class="text-slate-700 text-sm leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100 prose prose-sm prose-primary">
+          <!-- Rendered Feedback HTML -->
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Required Next Steps</h4>
+          <div id="missing-skills-pills" class="flex flex-wrap gap-2">
+            <!-- Rendered Missing Skills -->
+          </div>
+        </div>
+      </div>
+
+      <div class="px-6 py-4 border-t border-slate-100 bg-slate-50 flex justify-end">
+        <button id="close-modal-btn-bottom" class="btn-primary">Acknowledge</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Inline script injection for dynamic modal logic in main module -->
+  <script type="module" src="/src/dashboard.js"></script>
+</body>
+
+</html>
