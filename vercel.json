@@ -2,9 +2,6 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "framework": "vite",
-  "env": {
-    "VITE_APP_TITLE": "@InternMatch AI | Smart Internship Recommender"
-  },
   "rewrites": [
     {
       "source": "/:path((?!api|_next|_static|.*\\..*|public).*)",
